@@ -16,8 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Icon-60" translatesAutoresizingMaskIntoConstraints="NO" id="xl8-xZ-FOD">
-                                <rect key="frame" x="143" y="273" width="129" height="113"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="instagram-logo-png-2426" translatesAutoresizingMaskIntoConstraints="NO" id="mYb-se-hvo">
+                                <rect key="frame" x="138" y="214" width="139" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Screen Shot 2020-10-20 at 4.14.28 PM" translatesAutoresizingMaskIntoConstraints="NO" id="xsR-64-kZS">
+                                <rect key="frame" x="85" y="750" width="244" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -32,7 +36,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60" width="60" height="60"/>
+        <image name="Screen Shot 2020-10-20 at 4.14.28 PM" width="512" height="226"/>
+        <image name="instagram-logo-png-2426" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
