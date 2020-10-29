@@ -10,7 +10,7 @@ import Parse
 import AlamofireImage
 import MessageInputBar
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     let commentBar = MessageInputBar()
@@ -26,7 +26,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         commentBar.sendButton.title = "Post"
         commentBar.delegate = self
         
-        tableView.delegate = self
+        tableView.delegate = self  
         tableView.dataSource = self
         
         tableView.keyboardDismissMode = .interactive
@@ -35,6 +35,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
+    
     
     @objc func keyboardWillBeHidden(note: Notification){
         commentBar.inputTextView.text = nil
@@ -47,7 +48,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override var canBecomeFirstResponder: Bool{
-        return showsCommentBar
+        
+       return showsCommentBar
     }
     
   
@@ -144,7 +146,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        let post = posts[indexPath.row]
+        let post = posts[indexPath.section]
         let comments = (post["comments"] as? [PFObject]) ?? []
         
         if indexPath.row == comments.count + 1 {
